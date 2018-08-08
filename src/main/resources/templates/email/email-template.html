@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sending Email with Thymeleaf HTML Template Example</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+
+    <!-- use the font -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+    <tr>
+        <td align="center" bgcolor="#1e94d2" style="padding: 40px 0 30px 0;">
+            <p  style='text-align: center; color: #eaeaea; font-size: 14px;'><b>AMS</b> | Clínica </p>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" style="padding: 40px 30px 40px 30px;">
+            <p th:text="${'Prezado(a)  ' + usuario.primeiroNome + ' ' + usuario.sobrenome}"></p>
+            <p>
+			Essa mensagem foi enviada em razão de sua solicitação para alterar a senha de acesso ao sistema da AMS Clínica . 
+
+			Caso você não tenha solicitado a alteração de senha, entre em contato imediatamente com a AMS Clínica para reportar esse problema.
+
+			Você tem até 30 minutos, a partir da solicitação, para acessar o link abaixo e efetivar a alteração da senha.</p>
+
+			<p><a th:href="${resetUrl}">Altere a sua senha.</a></p>
+
+			Caso não seja possível clicar no link acima, favor copiar e colar o link na barra de endereço do navegador.
+
+			<p>Atenciosamente,</p>
+
+			<p>AMS Clínica</p>
+ 
+            <p>Obrigado</p>
+        </td>
+    </tr>
+    <tr>
+        <td  bgcolor="#1e94d2" style="padding: 30px 30px 30px 30px;">
+            <p style='text-align: left; color: #eaeaea;' th:text="${signature}"></p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+h1, h2, h3 {
+    color: #1e94d2;
+}
+
+body {
+    background-color: #efefef;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ccc
+}
+
+footer p {
+    padding: 15px;
+}
+
+.error-message {
+    color: #a94442;
+}
+
+.error-message:first-letter {
+    text-transform: capitalize;
+}
+.btn {
+    background-color: #1e94d2;
+    border-color:#1e94d2;   
+}
+
+.btn:hover, .btn:focus, .btn:active:focus, .btn.active:focus {
+	 background-color: #0d71c9;
+	 border-color: #0d71c9;
+	 border-color:#1e94d2;
+}
+
+.p {
+	color: #eaeaea;
+}
